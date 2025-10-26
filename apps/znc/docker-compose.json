@@ -8,15 +8,15 @@
             "internalPort": 6501,
             "environment": [
                 {
-                    "name": "PUID",
+                    "key": "PUID",
                     "value": "1000"
                 },
                 {
-                    "name": "PGID",
+                    "key": "PGID",
                     "value": "1000"
                 },
                 {
-                    "name": "TZ",
+                    "key": "TZ",
                     "value": "America/Edmonton"
                 }
             ],
