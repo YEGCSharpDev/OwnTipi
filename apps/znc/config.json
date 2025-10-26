@@ -1,0 +1,31 @@
+{
+  "name": "ZNC",
+  "id": "znc",
+  "available": true,
+  "short_desc": "An advanced IRC bouncer with built-in web administration.",
+  "author": "https://wiki.znc.in/ZNC",
+  "port": 6697,
+  "categories": ["network", "utilities"],
+  "description": "ZNC is an advanced IRC bouncer that stays connected so you don't have to. It buffers messages while you're offline and provides a powerful web interface for managing your connections, users, and configurations. It supports SSL, multiple users, and numerous community modules.",
+  "tipi_version": 1,
+  "version": "1.10.1",
+  "source": "https://github.com/znc/znc",
+  "website": "https://znc.in",
+  "exposable": true,
+  "force_expose": false,
+  "generate_vapid_keys": false,
+  "url_suffix":"znc",
+  "https": false,
+  "no_gui": false,
+  "supported_architectures": ["amd64", "arm64"],
+  "uid": 1000,
+  "gid": 1000,
+  "form_fields": [
+    
+  ],
+  "dynamic": true,
+  "deprecated": false,
+  "min_tipi_version": "v3.0.0",
+  "created_at": 1761445244077,
+  "updated_at": 1761445244077
+}
