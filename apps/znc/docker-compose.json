@@ -1,40 +1,34 @@
 {
-    "schemaVersion": 2,
-    "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
-    "services": [
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "services": [
+    {
+      "name": "znc",
+      "image": "linuxserver/znc:1.10.1",
+      "environment": [
         {
-            "name": "znc",
-            "image": "linuxserver/znc:1.10.1",
-            "internalPort": 6501,
-            "environment": [
-                {
-                    "key": "PUID",
-                    "value": "1000"
-                },
-                {
-                    "key": "PGID",
-                    "value": "1000"
-                },
-                {
-                    "key": "TZ",
-                    "value": "America/Edmonton"
-                }
-            ],
-            "volumes": [
-                {
-                    "hostPath": "/home/choppy/data/production_docker/app-data/znc",
-                    "containerPath": "/config",
-                    "readOnly": false,
-                    "shared": false,
-                    "private": false
-                }
-            ]
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        },
+        {
+          "key": "TZ",
+          "value": "America/Edmonton"
         }
-    ],
-    "healthCheck": {
-        "test": "curl --fail http://localhost || exit 1",
-        "retries": 3,
-        "interval": "30s",
-        "timeout": "10s"
+      ],
+      "internalPort": 6501,
+      "volumes": [
+        {
+          "hostPath": "/home/choppy/data/production_docker/app-data/znc",
+          "containerPath": "/config",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
     }
+  ]
 }
