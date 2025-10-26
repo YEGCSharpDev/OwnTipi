@@ -1,0 +1,26 @@
+{
+    "schemaVersion": 2,
+    "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
+    "services": [
+        {
+            "name": "znc",
+            "image": "znc:1.10.1",
+            "internalPort": 12345,
+            "volumes": [
+                {
+                    "hostPath": "/home/choppy/data/production_docker/app-data/znc",
+                    "containerPath": "/znc-data",
+                    "readOnly": false,
+                    "shared": false,
+                    "private": false
+                }
+            ]
+        }
+    ],
+    "healthCheck": {
+        "test": "curl --fail http://localhost || exit 1",
+        "retries": 3,
+        "interval": "30s",
+        "timeout": "10s"
+    }
+}
