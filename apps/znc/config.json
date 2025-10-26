@@ -14,7 +14,6 @@
   "exposable": true,
   "force_expose": false,
   "generate_vapid_keys": false,
-  "url_suffix":"znc",
   "https": false,
   "no_gui": false,
   "supported_architectures": ["amd64", "arm64"],
